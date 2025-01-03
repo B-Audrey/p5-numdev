@@ -17,7 +17,8 @@ export class MeComponent implements OnInit {
   constructor(private router: Router,
               private sessionService: SessionService,
               private matSnackBar: MatSnackBar,
-              private userService: UserService) {
+              private userService: UserService,
+              ) {
   }
 
   public ngOnInit(): void {

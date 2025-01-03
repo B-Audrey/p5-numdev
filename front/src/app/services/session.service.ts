@@ -23,6 +23,7 @@ export class SessionService {
   }
 
   public logOut(): void {
+    console.log('logOut');
     this.sessionInformation = undefined;
     this.isLogged = false;
     this.next();

@@ -4,6 +4,7 @@
   "scripts": {
     "start": "ng serve",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -30,8 +31,8 @@
     "zone.js": "0.11.8"
   },
   "devDependencies": {
-    "@angular-builders/jest": "14.0.1",
     "@angular-builders/custom-webpack": "^14.0.1",
+    "@angular-builders/jest": "14.0.1",
     "@angular-devkit/build-angular": "14.2.1",
     "@angular-eslint/builder": "14.0.3",
     "@angular-eslint/eslint-plugin": "14.0.3",
@@ -53,8 +54,9 @@
     "istanbul-lib-coverage": "3.2.0",
     "jest": "28.1.3",
     "jest-html-reporter": "3.6.0",
-    "jest-marbles": "3.0.3",
+    "jest-marbles": "^3.1.0",
     "nyc": "15.1.0",
+    "rxjs-marbles": "^7.0.1",
     "typescript": "4.7.4",
     "webpack": "5.74.0"
   }

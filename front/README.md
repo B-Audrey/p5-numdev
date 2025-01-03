@@ -18,7 +18,7 @@ Install dependencies:
 
 Launch Front-end:
 
-> npm run start;
+> npm run start
 
 
 ## Ressources

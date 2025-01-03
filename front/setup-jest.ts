@@ -1,4 +1,5 @@
 import 'jest-preset-angular/setup-jest';
+import 'jest-marbles';
 
 /* global mocks for jsdom */
 const mock = () => {
