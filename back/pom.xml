@@ -147,7 +147,52 @@
 						</configuration>
 					</execution>
 
+					<execution>
+						<id>integration-test-coverage</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<!-- Injecte l'agent JaCoCo avant les tests d'intégration -->
+							<goal>prepare-agent</goal>
+						</goals>
+						<configuration>
+							<!-- Fichier de sortie pour la couverture d'intégration -->
+							<destFile>${project.build.directory}/jacoco-it.exec</destFile>
+						</configuration>
+					</execution>
+					<execution>
+						<id>integration-test-report</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+						<configuration>
+							<dataFile>${project.build.directory}/jacoco-it.exec</dataFile>
+							<!-- Rapport de couverture d'intégration au format HTML dans target/integration -->
+							<outputDirectory>${project.build.directory}/integration</outputDirectory>
+						</configuration>
+					</execution>
+
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<phase>integration-test</phase>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<!-- On inclut ici les classes de tests d'intégration -->
+					<includes>
+						<include>**/*IntegrationTest.java</include>
+					</includes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
