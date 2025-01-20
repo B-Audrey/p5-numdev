@@ -2202,6 +2202,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/cypress@^1.1.6":
+  "integrity" "sha512-CfeLLD3+6vIWe2AO5hR63f1c8EbRzrp/j1ExubAwOTpwZFZvF3Nm9cOPQiUwzNmAUmZuhO0QVH98Qlujni6nPw=="
+  "resolved" "https://registry.npmjs.org/@types/cypress/-/cypress-1.1.6.tgz"
+  "version" "1.1.6"
+  dependencies:
+    "cypress" "*"
+
 "@types/eslint-scope@^3.7.3":
   "integrity" "sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA=="
   "resolved" "https://registry.npmjs.org/@types/eslint-scope/-/eslint-scope-3.7.4.tgz"

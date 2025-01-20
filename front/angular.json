@@ -123,7 +123,8 @@
         "cypress-run": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "yoga:serve"
+            "devServerTarget": "yoga:serve",
+            "codeCoverage": true
           },
           "configurations": {
             "production": {
@@ -143,7 +144,8 @@
           "options": {
             "devServerTarget": "yoga:serve-coverage",
             "watch": true,
-            "headless": false
+            "headless": false,
+            "codeCoverage": true
           },
           "configurations": {
             "production": {

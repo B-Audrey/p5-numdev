@@ -46,6 +46,7 @@
     "@cypress/schematic": "2.0.3",
     "@istanbuljs/nyc-config-typescript": "1.0.2",
     "@jsdevtools/coverage-istanbul-loader": "3.0.5",
+    "@types/cypress": "^1.1.6",
     "@types/jest": "28.1.3",
     "@typescript-eslint/eslint-plugin": "5.35.1",
     "@typescript-eslint/parser": "5.35.1",
@@ -59,5 +60,12 @@
     "rxjs-marbles": "^7.0.1",
     "typescript": "4.7.4",
     "webpack": "5.74.0"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "branches": 80,
+    "functions": 80,
+    "lines": 80,
+    "statements": 80
   }
 }

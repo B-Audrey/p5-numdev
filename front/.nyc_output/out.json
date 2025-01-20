@@ -1,6 +1,6 @@
 {
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/polyfills.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/polyfills.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/polyfills.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/polyfills.ts",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -13,7 +13,7 @@
       "names": [],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/polyfills.ts"
+        "/home/audrey/project/formation/p5-numdev/front/src/polyfills.ts"
       ],
       "sourcesContent": [
         "/**\n * This file includes polyfills needed by Angular and is loaded before the app.\n * You can add your own extra polyfills to this file.\n *\n * This file is divided into 2 sections:\n *   1. Browser polyfills. These are applied before loading ZoneJS and are sorted by browsers.\n *   2. Application imports. Files imported after ZoneJS that should be loaded before your main\n *      file.\n *\n * The current setup is for so-called \"evergreen\" browsers; the last versions of browsers that\n * automatically update themselves. This includes recent versions of Safari, Chrome (including\n * Opera), Edge on the desktop, and iOS and Chrome on mobile.\n *\n * Learn more in https://angular.io/guide/browser-support\n */\n\n/***************************************************************************************************\n * BROWSER POLYFILLS\n */\n\n/**\n * By default, zone.js will patch all possible macroTask and DomEvents\n * user can disable parts of macroTask/DomEvents patch by setting following flags\n * because those flags need to be set before `zone.js` being loaded, and webpack\n * will put import in the top of bundle, so user need to create a separate file\n * in this directory (for example: zone-flags.ts), and put the following flags\n * into that file, and then add the following code before importing zone.js.\n * import './zone-flags';\n *\n * The flags allowed in zone-flags.ts are listed here.\n *\n * The following flags will work for all browsers.\n *\n * (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame\n * (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick\n * (window as any).__zone_symbol__UNPATCHED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames\n *\n *  in IE/Edge developer tools, the addEventListener will also be wrapped by zone.js\n *  with the following flag, it will bypass `zone.js` patch for IE/Edge\n *\n *  (window as any).__Zone_enable_cross_context_check = true;\n *\n */\n\n/***************************************************************************************************\n * Zone JS is required by default for Angular itself.\n */\nimport 'zone.js';  // Included with Angular CLI.\n\n\n/***************************************************************************************************\n * APPLICATION IMPORTS\n */\n"
@@ -22,8 +22,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "9a3b81ed204555d90d1659e7f003a554453c5c8b"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/session.service.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/session.service.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/app/services/session.service.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/app/services/session.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -438,7 +438,7 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/session.service.ts"
+        "/home/audrey/project/formation/p5-numdev/front/src/app/services/session.service.ts"
       ],
       "sourcesContent": [
         "import { Injectable } from '@angular/core';\nimport { BehaviorSubject, Observable } from 'rxjs';\nimport { SessionInformation } from '../interfaces/sessionInformation.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class SessionService {\n\n  public isLogged = false;\n  public sessionInformation: SessionInformation | undefined;\n\n  private isLoggedSubject = new BehaviorSubject<boolean>(this.isLogged);\n\n  public $isLogged(): Observable<boolean> {\n    return this.isLoggedSubject.asObservable();\n  }\n\n  public logIn(user: SessionInformation): void {\n    this.sessionInformation = user;\n    this.isLogged = true;\n    this.next();\n  }\n\n  public logOut(): void {\n    this.sessionInformation = undefined;\n    this.isLogged = false;\n    this.next();\n  }\n\n  private next(): void {\n    this.isLoggedSubject.next(this.isLogged);\n  }\n}\n"
@@ -447,8 +447,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "1c7580cd9bc2570f9011ad5aeff0fc893b7f5689"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/user.service.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/user.service.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/app/services/user.service.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/app/services/user.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -743,7 +743,7 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/services/user.service.ts"
+        "/home/audrey/project/formation/p5-numdev/front/src/app/services/user.service.ts"
       ],
       "sourcesContent": [
         "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { User } from '../interfaces/user.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class UserService {\n\n  private pathService = 'api/user';\n\n  constructor(private httpClient: HttpClient) { }\n\n  public getById(id: string): Observable<User> {\n    return this.httpClient.get<User>(`${this.pathService}/${id}`);\n  }\n\n  public delete(id: string): Observable<any> {\n    return this.httpClient.delete(`${this.pathService}/${id}`);\n  }\n}\n"
@@ -752,8 +752,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "c92e30d6390e2a3675b6f727ab47ea1437227f9e"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/me/me.component.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/me/me.component.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/app/components/me/me.component.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/app/components/me/me.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -2400,8 +2400,8 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/me/me.component.html",
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/me/me.component.ts"
+        "/home/audrey/project/formation/p5-numdev/front/src/app/components/me/me.component.html",
+        "/home/audrey/project/formation/p5-numdev/front/src/app/components/me/me.component.ts"
       ],
       "sourcesContent": [
         "<div class=\"m3\">\n  <mat-card>\n    <mat-card-title>\n      <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\n        <button mat-icon-button (click)=\"back()\">\n          <mat-icon>arrow_back</mat-icon>\n        </button>\n        <h1>User information</h1>\n      </div>\n    </mat-card-title>\n    <mat-card-content>\n      <div *ngIf=\"user\" fxLayout=\"column\" fxLayoutAlign=\"start center\">\n        <p>Name: {{ user.firstName }} {{ user.lastName | uppercase }}</p>\n        <p>Email: {{ user.email }}</p>\n        <p *ngIf=\"user.admin\" class=\"my2\">You are admin</p>\n        <div *ngIf=\"!user.admin\" fxLayout=\"column\" class=\"my2\" fxLayoutAlign=\"center center\">\n          <p>Delete my account:</p>\n          <button mat-raised-button color=\"warn\" (click)=\"delete()\">\n            <mat-icon>delete</mat-icon>\n            <span class=\"ml1\">Detail</span>\n          </button>\n        </div>\n        <div fxLayoutAlign=\"space-between center\" class=\"p2 w100\">\n\n          <p><i>Create at: </i> {{ user.createdAt | date: 'longDate'}}</p>\n          <p><i>Last update: </i> {{ user.updatedAt| date: 'longDate'}}</p>\n        </div>\n      </div>\n    </mat-card-content>\n  </mat-card>\n</div>\n",
@@ -2411,8 +2411,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "cd1ce72cda39fe70df79d86da34755fc5b7e0d2b"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/not-found/not-found.component.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/not-found/not-found.component.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/app/components/not-found/not-found.component.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/app/components/not-found/not-found.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -2693,8 +2693,8 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/not-found/not-found.component.ts",
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/components/not-found/not-found.component.html"
+        "/home/audrey/project/formation/p5-numdev/front/src/app/components/not-found/not-found.component.ts",
+        "/home/audrey/project/formation/p5-numdev/front/src/app/components/not-found/not-found.component.html"
       ],
       "sourcesContent": [
         "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-not-found',\n  templateUrl: './not-found.component.html',\n  styleUrls: ['./not-found.component.scss']\n})\nexport class NotFoundComponent {\n}\n",
@@ -2704,8 +2704,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "fb1db802cda7c85e5a5621a8c60eef41cbe301d2"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/auth.guard.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/auth.guard.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/app/guards/auth.guard.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/app/guards/auth.guard.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -3037,7 +3037,7 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/auth.guard.ts"
+        "/home/audrey/project/formation/p5-numdev/front/src/app/guards/auth.guard.ts"
       ],
       "sourcesContent": [
         "import {Injectable} from \"@angular/core\";\nimport {CanActivate, Router} from \"@angular/router\"; \nimport { SessionService } from \"../services/session.service\";\n\n@Injectable({providedIn: 'root'})\nexport class AuthGuard implements CanActivate {\n\n  constructor( \n    private router: Router,\n    private sessionService: SessionService,\n  ) {\n  }\n\n  public canActivate(): boolean {\n    if (!this.sessionService.isLogged) {\n      this.router.navigate(['login']);\n      return false;\n    }\n    return true;\n  }\n}"
@@ -3046,8 +3046,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "2346bd7b83dc6466475cd81a46141c16bc2bec67"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/unauth.guard.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/unauth.guard.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/app/guards/unauth.guard.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/app/guards/unauth.guard.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -3379,7 +3379,7 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/guards/unauth.guard.ts"
+        "/home/audrey/project/formation/p5-numdev/front/src/app/guards/unauth.guard.ts"
       ],
       "sourcesContent": [
         "import {Injectable} from \"@angular/core\";\nimport {CanActivate, Router} from \"@angular/router\"; \nimport { SessionService } from \"../services/session.service\";\n\n@Injectable({providedIn: 'root'})\nexport class UnauthGuard implements CanActivate {\n\n  constructor( \n    private router: Router,\n    private sessionService: SessionService,\n  ) {\n  }\n\n  public canActivate(): boolean {\n    if (this.sessionService.isLogged) {\n      this.router.navigate(['rentals']);\n      return false;\n    }\n    return true;\n  }\n}"
@@ -3388,8 +3388,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "5b8da90e39f22933f4fa8fd881d7fc357bae7576"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app-routing.module.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app-routing.module.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/app/app-routing.module.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/app/app-routing.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -3737,7 +3737,7 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app-routing.module.ts"
+        "/home/audrey/project/formation/p5-numdev/front/src/app/app-routing.module.ts"
       ],
       "sourcesContent": [
         "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { MeComponent } from './components/me/me.component';\nimport { NotFoundComponent } from './components/not-found/not-found.component';\nimport { AuthGuard } from './guards/auth.guard';\nimport { UnauthGuard } from './guards/unauth.guard';\n\nconst routes: Routes = [\n  {\n    path: '',\n    canActivate: [UnauthGuard],\n    loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)\n  },\n  {\n    path: 'sessions',\n    canActivate: [AuthGuard],\n    loadChildren: () => import('./features/sessions/sessions.module').then(m => m.SessionsModule)\n  },\n  {\n    path: 'me',\n    canActivate: [AuthGuard],\n    component: MeComponent\n  },\n  { path: '404', component: NotFoundComponent },\n  { path: '**', redirectTo: '404' }\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule {\n}\n"
@@ -3746,8 +3746,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "75882c59e0ba1deb60c90d44def4d81b31f6902b"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/services/auth.service.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/services/auth.service.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/services/auth.service.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/services/auth.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -4043,7 +4043,7 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/services/auth.service.ts"
+        "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/services/auth.service.ts"
       ],
       "sourcesContent": [
         "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { LoginRequest } from '../interfaces/loginRequest.interface';\nimport { AuthSuccess  } from '../interfaces/authSuccess.interface';\nimport { RegisterRequest } from '../interfaces/registerRequest.interface';\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class AuthService {\n\n  private pathService = 'api/auth';\n\n  constructor(private httpClient: HttpClient) { }\n\n  public register(registerRequest: RegisterRequest): Observable<AuthSuccess> {\n    return this.httpClient.post<AuthSuccess>(`${this.pathService}/register`, registerRequest);\n  }\n\n  public login(loginRequest: LoginRequest): Observable<SessionInformation> {\n    return this.httpClient.post<SessionInformation>(`${this.pathService}/login`, loginRequest);\n  }\n}\n"
@@ -4052,8 +4052,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "9d5ec93e8ac0d6ccfb1c34b169de605b7b354f1a"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.component.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.component.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/app/app.component.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/app/app.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5042,8 +5042,8 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.component.html",
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.component.ts"
+        "/home/audrey/project/formation/p5-numdev/front/src/app/app.component.html",
+        "/home/audrey/project/formation/p5-numdev/front/src/app/app.component.ts"
       ],
       "sourcesContent": [
         "<div class=\"app\">\n  <mat-toolbar color=\"primary\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n    <span>Yoga app</span>\n    <div *ngIf=\"$isLogged() | async; else notLogged\">\n      <span routerLink=\"sessions\" class=\"link\">Sessions</span>\n      <span routerLink=\"me\" class=\"link\">Account</span>\n      <span (click)=\"logout()\" class=\"link\">Logout</span>\n    </div>\n    <ng-template #notLogged>\n      <div>\n        <span routerLink=\"login\" class=\"link\">Login</span>\n        <span routerLink=\"register\" class=\"link\">Register</span>\n      </div>\n    </ng-template>\n  </mat-toolbar>\n  <div>\n    <router-outlet></router-outlet>\n  </div>\n</div>\n",
@@ -5053,8 +5053,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "a0b025bc8a7a905de33180a3ffc6bee8b727add4"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/interceptors/jwt.interceptor.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/interceptors/jwt.interceptor.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/app/interceptors/jwt.interceptor.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/app/interceptors/jwt.interceptor.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5371,7 +5371,7 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/interceptors/jwt.interceptor.ts"
+        "/home/audrey/project/formation/p5-numdev/front/src/app/interceptors/jwt.interceptor.ts"
       ],
       "sourcesContent": [
         "import { HttpHandler, HttpInterceptor, HttpRequest } from \"@angular/common/http\";\nimport { Injectable } from \"@angular/core\";\nimport { SessionService } from '../services/session.service';\n\n@Injectable({ providedIn: 'root' })\nexport class JwtInterceptor implements HttpInterceptor {\n  constructor(private sessionService: SessionService) {}\n\n  public intercept(request: HttpRequest<any>, next: HttpHandler) {\n    if (this.sessionService.isLogged) {\n      request = request.clone({\n        setHeaders: {\n          Authorization: `Bearer ${this.sessionService.sessionInformation!.token}`,\n        },\n      });\n    }\n    return next.handle(request);\n  }\n}\n"
@@ -5380,8 +5380,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "b8fe7a2b4606d34c9e34046a6168eb10b739bd91"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.module.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.module.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/app/app.module.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/app/app.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5588,7 +5588,7 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/app.module.ts"
+        "/home/audrey/project/formation/p5-numdev/front/src/app/app.module.ts"
       ],
       "sourcesContent": [
         "import { NgModule } from '@angular/core';\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { NotFoundComponent } from './components/not-found/not-found.component';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatToolbarModule } from '@angular/material/toolbar';\nimport { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';\nimport { JwtInterceptor } from './interceptors/jwt.interceptor';\nimport { MatCardModule } from '@angular/material/card';\nimport { FlexLayoutModule } from '@angular/flex-layout';\nimport { MeComponent } from './components/me/me.component';\n\nconst materialModule = [\n  MatButtonModule,\n  MatCardModule,\n  MatIconModule,\n  MatSnackBarModule,\n  MatToolbarModule,\n]\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    NotFoundComponent,\n    MeComponent,\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    BrowserAnimationsModule, \n    FlexLayoutModule,\n    HttpClientModule,\n    ...materialModule\n  ],\n  providers: [\n    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },\n  ],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n"
@@ -5597,8 +5597,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "a6e698b4c5d51521d451569e045fa650a0352018"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/environments/environment.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/environments/environment.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/environments/environment.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/environments/environment.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5628,7 +5628,7 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/environments/environment.ts"
+        "/home/audrey/project/formation/p5-numdev/front/src/environments/environment.ts"
       ],
       "sourcesContent": [
         "export const environment = {\n  baseUrl: 'localhost:8080/api/',\n  production: false\n};\n"
@@ -5637,8 +5637,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "bb9194866a829376438d80f96707aeddc8f5ff60"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/main.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/main.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/main.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/main.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5777,7 +5777,7 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/main.ts"
+        "/home/audrey/project/formation/p5-numdev/front/src/main.ts"
       ],
       "sourcesContent": [
         "import { enableProdMode } from '@angular/core';\nimport { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\n\nimport { AppModule } from './app/app.module';\nimport { environment } from './environments/environment';\n\nif (environment.production) {\n  enableProdMode();\n}\n\nplatformBrowserDynamic().bootstrapModule(AppModule)\n  .catch(err => console.error(err));\n"
@@ -5786,8 +5786,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "4a6fc756c5eab4a652a40ac79e03ba54c4d35c88"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/login/login.component.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/login/login.component.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/components/login/login.component.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/components/login/login.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -6955,8 +6955,8 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/login/login.component.ts",
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/login/login.component.html"
+        "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/components/login/login.component.ts",
+        "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/components/login/login.component.html"
       ],
       "sourcesContent": [
         "import { Component } from '@angular/core';\nimport { FormBuilder, Validators } from '@angular/forms';\nimport { Router } from '@angular/router';\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\nimport { SessionService } from 'src/app/services/session.service';\nimport { LoginRequest } from '../../interfaces/loginRequest.interface';\nimport { AuthService } from '../../services/auth.service';\n\n@Component({\n  selector: 'app-login',\n  templateUrl: './login.component.html',\n  styleUrls: ['./login.component.scss']\n})\nexport class LoginComponent {\n  public hide = true;\n  public onError = false;\n\n  public form = this.fb.group({\n    email: [\n      // 'test@test.com',\n      'toto3@toto.com',\n      [\n        Validators.required,\n        Validators.email\n      ]\n    ],\n    password: [\n      'test!1234',\n      [\n        Validators.required,\n        Validators.min(3)\n      ]\n    ]\n  });\n\n  constructor(private authService: AuthService,\n              private fb: FormBuilder,\n              private router: Router,\n              private sessionService: SessionService) {\n  }\n\n  public submit(): void {\n    const loginRequest = this.form.value as LoginRequest;\n    this.authService.login(loginRequest).subscribe({\n      next: (response: SessionInformation) => {\n        this.sessionService.logIn(response);\n        this.router.navigate(['/sessions']);\n      },\n      error: error => this.onError = true,\n    });\n  }\n}\n",
@@ -6966,8 +6966,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "0f72f0c15c34fb65167da907c2a5dc61f48c42de"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/register/register.component.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/register/register.component.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/components/register/register.component.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/components/register/register.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -7943,8 +7943,8 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/register/register.component.ts",
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/components/register/register.component.html"
+        "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/components/register/register.component.ts",
+        "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/components/register/register.component.html"
       ],
       "sourcesContent": [
         "import { Component } from '@angular/core';\nimport { FormBuilder, Validators } from '@angular/forms';\nimport { Router } from '@angular/router';\nimport { SessionService } from 'src/app/services/session.service';\nimport { AuthService } from '../../services/auth.service';\nimport { RegisterRequest } from '../../interfaces/registerRequest.interface';\nimport { AuthSuccess } from '../../interfaces/authSuccess.interface';\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\n\n@Component({\n  selector: 'app-register',\n  templateUrl: './register.component.html',\n  styleUrls: ['./register.component.scss']\n})\nexport class RegisterComponent {\n\n  public onError = false;\n\n  public form = this.fb.group({\n    email: ['', [Validators.required, Validators.email]],\n    firstName: ['', [Validators.required, Validators.min(3), Validators.max(20)]],\n    lastName: ['', [Validators.required, Validators.min(3), Validators.max(20)]],\n    password: ['', [Validators.required, Validators.min(3), Validators.max(40)]]\n  });\n\n  constructor(private authService: AuthService,\n    private fb: FormBuilder,\n    private router: Router) { }\n\n  public submit(): void {\n    const registerRequest = this.form.value as RegisterRequest;\n    this.authService.register(registerRequest).subscribe({\n        next: (_: AuthSuccess) => this.router.navigate(['/login']),\n        error: _ => this.onError = true,\n      }\n    );\n  }\n\n}\n",
@@ -7954,8 +7954,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "993ead6b15608357c11d8b4c96f877374374b8b2"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth-routing.module.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth-routing.module.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/auth-routing.module.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/auth-routing.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -8151,7 +8151,7 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth-routing.module.ts"
+        "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/auth-routing.module.ts"
       ],
       "sourcesContent": [
         "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { LoginComponent } from './components/login/login.component';\nimport { RegisterComponent } from './components/register/register.component';\n\n\nconst routes: Routes = [\n  { title: 'Login', path: 'login', component: LoginComponent },\n  { title: 'Register', path: 'register', component: RegisterComponent }\n];\n\n@NgModule({\n  imports: [RouterModule.forChild(routes)],\n  exports: [RouterModule]\n})\nexport class AuthRoutingModule { }\n"
@@ -8160,8 +8160,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "5f99d4e85e42c81bb488846d88df0e0ccca7405d"
   },
-  "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth.module.ts": {
-    "path": "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth.module.ts",
+  "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/auth.module.ts": {
+    "path": "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/auth.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -8360,7 +8360,7 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "/Users/joffreyhernandez/Repository/OC/parcours-Angular_Java/P5-Full-Stack-testing/front/src/app/features/auth/auth.module.ts"
+        "/home/audrey/project/formation/p5-numdev/front/src/app/features/auth/auth.module.ts"
       ],
       "sourcesContent": [
         "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { AuthRoutingModule } from './auth-routing.module';\nimport { RegisterComponent } from './components/register/register.component';\nimport { LoginComponent } from './components/login/login.component';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatInputModule } from '@angular/material/input';\nimport { FlexLayoutModule } from '@angular/flex-layout';\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\nimport { MatIconModule } from '@angular/material/icon';\n\nconst materialModules = [\n  MatButtonModule,\n  MatCardModule,\n  MatFormFieldModule,\n  MatIconModule,\n  MatInputModule\n]\n\n@NgModule({\n  declarations: [\n    RegisterComponent,\n    LoginComponent\n  ],\n  imports: [\n    AuthRoutingModule,\n    CommonModule,\n    FlexLayoutModule,\n    FormsModule,\n    ReactiveFormsModule,\n    ...materialModules\n  ]\n})\nexport class AuthModule { }\n"
