@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { User } from '../../interfaces/user.interface';
 import { SessionService } from '../../services/session.service';
 import { UserService } from '../../services/user.service';
+import {tap} from 'rxjs';
 
 @Component({
   selector: 'app-me',

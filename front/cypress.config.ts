@@ -13,4 +13,6 @@ export default defineConfig({
     },
     baseUrl: 'http://localhost:4200',
   },
+  execTimeout: 10_000,
+
 })

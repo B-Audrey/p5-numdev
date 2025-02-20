@@ -1,0 +1,16 @@
+[
+  {
+    "id": 5,
+    "lastName": "TEACHER",
+    "firstName": "Koopa Troopa",
+    "createdAt": "2024-01-01T12:00:00.000Z",
+    "updatedAt": "2025-01-10T12:00:00.000Z"
+  },
+  {
+    "id": 6,
+    "lastName": "TEACHER",
+    "firstName": "King Boo",
+    "createdAt": "2024-01-01T12:00:00.000Z",
+    "updatedAt": "2025-01-10T12:00:00.000Z"
+  }
+]

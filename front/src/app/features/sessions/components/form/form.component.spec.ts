@@ -106,9 +106,9 @@ describe('FormComponent', () => {
 
   it('should call teacherService.all and return teachers', () => {
     const mockTeachers = [
-      { id: '1', firstName: 'John', lastName: 'Doe' },
-      { id: '2', firstName: 'Jane', lastName: 'Smith' },
-      { id: '3', firstName: 'Alice', lastName: 'Johnson' },
+      { id: '1', firstName: 'Luigi', lastName: 'BROS' },
+      { id: '2', firstName: 'Baby', lastName: 'BOWSER' },
+      { id: '3', firstName: 'Big', lastName: 'BOWSER' },
     ];
     const allSpy = jest.spyOn(mockTeacherService, 'all').mockReturnValue(of(mockTeachers));
     fixture.detectChanges();

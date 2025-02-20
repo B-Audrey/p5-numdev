@@ -1,0 +1,9 @@
+{
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0b3RvQGRldi5mciIsImlhdCI6MTczNzQ1NzkwOCwiZXhwIjoxNzM3NTQ0MzA4fQ.gqaYAxPpvEylnh7qTmLNuL1AH64roRUc4u-mX66HfjNZV-mCg-rehzg65XPPfD4RkKAE-eiXios5KYWiD7oo0g",
+  "type": "Bearer",
+  "id": 1,
+  "username": "admin@test.com",
+  "firstName": "Yoshi",
+  "lastName": "Admin",
+  "admin": true
+}

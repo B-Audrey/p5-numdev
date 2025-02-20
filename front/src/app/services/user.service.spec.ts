@@ -32,8 +32,8 @@ describe('UserService', () => {
   it('should call user by id and return a user', () => {
     let mockUser = {
       id: 1,
-      firstName: 'firstName',
-      lastName: 'lastName',
+      firstName: 'Peach',
+      lastName: 'Princess',
       email: 'email@dev.fr',
     }
     httpSpy.get.mockReturnValueOnce(of(mockUser));

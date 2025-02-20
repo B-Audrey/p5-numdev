@@ -1,7 +1,0 @@
-{
-  "token": "fake-token",
-  "user": {
-    "id": 1,
-    "email": "user@test.com"
-  }
-}

@@ -1,0 +1,10 @@
+{
+  "id": 2,
+  "email": "admin@test.com",
+  "firstName": "Yoshi",
+  "lastName": "Admin",
+  "admin": true,
+  "password": "adminpassword",
+  "createdAt": "2022-01-01T10:00:00.000Z",
+  "updatedAt": "2023-01-01T12:00:00.000Z"
+}

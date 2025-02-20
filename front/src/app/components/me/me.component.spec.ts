@@ -19,9 +19,9 @@ describe('MeComponent', () => {
 
   const mockUser: Partial<User> = {
     id: 1,
-    firstName: 'John',
-    lastName: 'Doe',
-    email: 'john.doe@example.com',
+    firstName: 'Mario',
+    lastName: 'bros',
+    email: 'mario@example.com',
     admin: true,
   };
 
@@ -85,7 +85,7 @@ describe('MeComponent', () => {
 
   it('should display user information in the template', () => {
     const nameElement = fixture.debugElement.query(By.css('p')).nativeElement;
-    expect(nameElement.textContent).toContain('John DOE'); // Nom avec uppercase
+    expect(nameElement.textContent).toContain('Mario BROS'); // Nom avec uppercase
   });
 
   it('should not display delete button if user is admin', () => {

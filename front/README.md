@@ -8,15 +8,12 @@ Git clone:
 
 > git clone https://github.com/OpenClassrooms-Student-Center/P5-Full-Stack-testing
 
-Go inside folder:
-
-> cd yoga
-
-Install dependencies:
+- Go inside folder
+- Install dependencies:
 
 > npm install
 
-Launch Front-end:
+- Launch Front-end application:
 
 > npm run start
 
@@ -53,9 +50,9 @@ Launching e2e test:
 
 > npm run e2e
 
-Generate coverage report (you should launch e2e test before):
+Generate coverage report (will launch tests before report generation):
 
-> npm run e2e:coverage
+> npm run cypress:test
 
 Report is available here:
 

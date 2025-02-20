@@ -1,9 +1,11 @@
 describe('Login Page', () => {
+
+
   beforeEach(() => {
     // Mock de l'API login avec les fixtures
     cy.intercept('POST', '/api/auth/login', (req) => {
       if (req.body.email === 'user@test.com' && req.body.password === 'password123') {
-        req.reply({ statusCode: 200, fixture: 'login-success.json' });
+        req.reply({ statusCode: 200, fixture: 'user-login-success.json' });
       } else {
         req.reply({ statusCode: 401, fixture: 'login-failure.json' });
       }
@@ -16,9 +18,22 @@ describe('Login Page', () => {
   it('Affiche le formulaire de connexion', () => {
     cy.get('mat-card-title').should('contain', 'Login');
     cy.get('input[formControlName="email"]').should('be.visible');
+    cy.get('input[formControlName="email"]').should('contain.value', '');
     cy.get('input[formControlName="password"]').should('be.visible');
+    cy.get('input[formControlName="password"]').should('contain.value', '');
+    cy.get('form').should('be.visible');
+    cy.get('button[type="submit"]').should('be.visible');
     cy.get('button[type="submit"]').should('be.disabled');
   });
+
+  it('Permet d\'afficher et de masquer le mot de passe', () => {
+    cy.get('button[matSuffix]').click();
+    cy.get('input[formControlName="password"]').should('have.attr', 'type', 'text');
+
+    cy.get('button[matSuffix]').click();
+    cy.get('input[formControlName="password"]').should('have.attr', 'type', 'password');
+  });
+
 
   it('Désactive le bouton de connexion si le formulaire est invalide', () => {
     cy.get('input[formControlName="email"]').type('test');
